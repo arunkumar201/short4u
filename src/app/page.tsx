@@ -4,10 +4,12 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { Lock } from 'lucide-react';
 import { LoginButton } from '@/components/custom-ui/login-button';
+import NavBar from '@/components/navbar/NavBar';
 
 export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+      <NavBar/>
       <section className='w-full py-12 md:py-24 lg:py-32'>
         <div className='container px-4 md:px-6'>
           <div className='flex flex-col items-center space-y-4 text-center'>
