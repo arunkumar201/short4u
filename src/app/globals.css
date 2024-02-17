@@ -10,67 +10,41 @@ body,
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
+    --gradient: #9796f0;
 
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
+    --background: 256 48.75% 6.08%;
+    --foreground: 256 7.5% 98.8%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
+    --muted: 256 37.5% 22.8%;
+    --muted-foreground: 256 7.5% 57.6%;
 
-    --primary: 24 9.8% 10%;
-    --primary-foreground: 60 9.1% 97.8%;
+    --popover: 256 50% 9.88%;
+    --popover-foreground: 256 7.5% 98.8%;
 
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
+    --card: 256 50% 9.88%;
+    --card-foreground: 256 7.5% 98.8%;
 
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
+    --border: 256 37.5% 22.8%;
+    --input: 256 37.5% 22.8%;
 
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
+    --primary: 256 75% 76%;
+    --primary-foreground: 256 7.5% 7.6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
+    --secondary: 256 37.5% 22.8%;
+    --secondary-foreground: 256 7.5% 98.8%;
 
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 20 14.3% 4.1%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 60 9.1% 97.8%;
-
-    --card: 20 14.3% 4.1%;
-    --card-foreground: 60 9.1% 97.8%;
-
-    --popover: 20 14.3% 4.1%;
-    --popover-foreground: 60 9.1% 97.8%;
-
-    --primary: 60 9.1% 97.8%;
-    --primary-foreground: 24 9.8% 10%;
-
-    --secondary: 12 6.5% 15.1%;
-    --secondary-foreground: 60 9.1% 97.8%;
-
-    --muted: 12 6.5% 15.1%;
-    --muted-foreground: 24 5.4% 63.9%;
-
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 60 9.1% 97.8%;
+    --accent: 256 37.5% 22.8%;
+    --accent-foreground: 256 7.5% 98.8%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 60 9.1% 97.8%;
+    --destructive-foreground: 256 7.5% 98.8%;
 
-    --border: 12 6.5% 15.1%;
-    --input: 12 6.5% 15.1%;
-    --ring: 24 5.7% 82.9%;
+    --ring: 256 75% 76%;
   }
+
 }
+
+@layer components {}
 
 @layer base {
   * {
@@ -78,6 +52,15 @@ body,
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-3xl bg-background text-foreground;
   }
+
+}
+
+.home-bg {
+  background-image: linear-gradient(to top, #000000, #140b0f, #1e131b, #261a27, #2b2136, #29233b, #252540, #1f2845, #16253f, #0e2139, #051e33, #001a2d);
+}
+
+.nav-menu {
+  @apply text-sm md:text-base  rounded-xl px-3 py-0
 }

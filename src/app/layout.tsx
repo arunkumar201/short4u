@@ -1,6 +1,7 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
+import NavBar from '@/components/navbar/NavBar';
 import { Poppins } from 'next/font/google';
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProviders } from '@/context/ThemeContext';
@@ -22,12 +23,13 @@ export default async function RootLayout({
   const session = await auth();
   return (
     <html lang='en' className=''>
-      <body className={cn('transition-colors duration-50', poppins.className)}>
+      <body className={cn('transition-colors duration-50 home-bg', poppins.className)}>
         <SessionProvider session={session}>
           <ThemeProviders>
-            <div className='min-h-full w-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-green-400 via-fuchsia-200 to-sky-700'>
-              {children}
+            <div className='fixed w-full px-3 py-3 md:px-20 bg-primary dark:bg-primary-foreground text-primary-foreground dark:text-primary '>
+              <NavBar />
             </div>
+            <div className='w-full min-h-full'>{children}</div>
           </ThemeProviders>
         </SessionProvider>
       </body>

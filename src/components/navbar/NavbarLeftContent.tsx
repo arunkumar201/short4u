@@ -1,0 +1,19 @@
+import Link from 'next/link';
+import { Menu } from 'lucide-react';
+import { NavSideBar } from './NavSideBar';
+import React from 'react';
+
+type Props = {};
+
+export const NavbarLeftContent = (props: Props) => {
+  return (
+    <div className='flex items-center justify-between mt-2 gap-x-2 md:mt-0'>
+      <div className='relative z-50 block md:hidden'>
+        <NavSideBar />
+      </div>
+      <Link href={'/'} className='text-base uppercase md:text-xl'>
+        Short4U
+      </Link>
+    </div>
+  );
+};

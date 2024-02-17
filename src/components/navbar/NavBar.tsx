@@ -1,26 +1,19 @@
-import Image from 'next/image';
-import logo from '../../../public/navbar/short4u-logo.png';
+import { NavBarOptions } from './NavbarOptions';
+import { NavbarLeftContent } from './NavbarLeftContent';
+import { NavbarRightContent } from './NavbarRightContent';
+
 const NavBar = () => {
   return (
     <>
-      <div>
+      <div className='flex items-center justify-between w-full h-full'>
         {/* Logo */}
-        <div>
-          <Image
-            src={logo}
-            alt='short4u'
-            aria-details='Short4u is a link shortener service'
-            quality={100}
-            priority={true}
-            width={"143"}
-            height={103}
-            className=''
-          />
-        </div>
+        <NavbarLeftContent />
         {/* Navbar Options */}
-        <div></div>
+        <div className='hidden md:flex '>
+          <NavBarOptions />
+        </div>
         {/* Login,signUp and getQuote section */}
-        <div></div>
+        <NavbarRightContent />
       </div>
     </>
   );
