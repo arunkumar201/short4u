@@ -26,6 +26,7 @@ const ThemeToggleBtn = () => {
 
   return (
     <button
+      aria-label="theme-toggle"
       className='flex items-center justify-center w-12 transition-all rounded-full duration-400'
       style={btnStyle}
       onClick={handleToggle}
