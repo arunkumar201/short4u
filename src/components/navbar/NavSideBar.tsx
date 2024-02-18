@@ -17,7 +17,10 @@ export const NavSideBar = () => {
     <>
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant='outline' aria-level={"open side bar "}>
+          <Button
+            variant='outline'
+            aria-description='open menu'
+            >
             <Menu />
           </Button>
         </SheetTrigger>
