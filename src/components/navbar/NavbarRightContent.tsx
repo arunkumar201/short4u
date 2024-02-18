@@ -3,9 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import ThemeToggleBtn from '../ThemeToggleBtn';
 
-type Props = {};
-
-export const NavbarRightContent = (props: Props) => {
+export const NavbarRightContent = () => {
   return (
     <div className='flex items-center justify-between gap-2'>
       <ThemeToggleBtn />

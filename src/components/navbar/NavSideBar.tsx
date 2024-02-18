@@ -1,10 +1,6 @@
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
 
@@ -16,16 +12,10 @@ export const NavSideBar = () => {
   return (
     <>
       <Sheet>
-        <SheetTrigger asChild>
-          <Button
-            variant='outline'
-            aria-description='Menu'
-          >
-            <span className='sr-only'>Menu</span>
-            <Menu />
-          </Button>
+        <SheetTrigger asChild className='p-1 -py-2'>
+            <Menu  size={30} className='dark:text-primary text-primary-foreground'/>
         </SheetTrigger>
-        <SheetContent side={'left'}>
+        <SheetContent side={'left'} className='max-w-[18rem]'>
           <div className='flex flex-row '>
               <NavBarOptions isMobile={true} />
           </div>

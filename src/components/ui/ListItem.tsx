@@ -12,7 +12,7 @@ const Icon: Record<string, ReactNode> = {
 export const ListItem = React.forwardRef<
   React.ElementRef<'a'>,
   React.ComponentPropsWithoutRef<'a'> | any
->(({ className, title, icon, children, ...props }, ref) => {
+>(({ className, title, icon,isMobile, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -26,12 +26,12 @@ export const ListItem = React.forwardRef<
         >
           <div className='flex flex-row items-center justify-start h-full gap-2 text-sm font-medium leading-none'>
             <span className='self-center'>{Icon[icon]}</span>
-            <span className='text-sm md:text-sm '>{title}</span>
+            <span className={cn('text-sm md:text-sm',isMobile && "w-max")}>{title}</span>
           </div>
 
-          <p className='text-sm leading-snug line-clamp-2'>
+          {!isMobile && <p className={cn('text-sm leading-snug line-clamp-2',isMobile && "text-sm")}>
             {children}
-          </p>
+          </p>}
         </a>
       </NavigationMenuLink>
     </li>
