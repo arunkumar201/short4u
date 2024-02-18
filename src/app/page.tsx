@@ -1,10 +1,3 @@
-'use client';
-
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import { Lock } from 'lucide-react';
-import { LoginButton } from '@/components/custom-ui/login-button';
-import NavBar from '@/components/navbar/NavBar';
 
 export default function Home() {
   return (

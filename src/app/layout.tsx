@@ -3,9 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import NavBar from '@/components/navbar/NavBar';
 import { Poppins } from 'next/font/google';
-import { SessionProvider } from 'next-auth/react';
 import { ThemeProviders } from '@/context/ThemeContext';
-import { auth } from '@/auth';
 import { cn } from '@/lib/utils';
 
 const poppins = Poppins({ weight: '500', subsets: ['latin'] });
@@ -20,18 +18,15 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await auth();
   return (
     <html lang='en' className=''>
       <body className={cn('transition-colors duration-50 home-bg', poppins.className)}>
-        <SessionProvider session={session}>
           <ThemeProviders>
             <div className='fixed w-full px-3 py-3 md:px-20 bg-primary dark:bg-primary-foreground text-primary-foreground dark:text-primary '>
               <NavBar />
             </div>
             <div className='w-full min-h-full'>{children}</div>
           </ThemeProviders>
-        </SessionProvider>
       </body>
     </html>
   );
