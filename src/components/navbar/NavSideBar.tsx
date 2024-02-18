@@ -19,8 +19,9 @@ export const NavSideBar = () => {
         <SheetTrigger asChild>
           <Button
             variant='outline'
-            aria-description='open menu'
-            >
+            aria-description='Menu'
+          >
+            <span className='sr-only'>Menu</span>
             <Menu />
           </Button>
         </SheetTrigger>
