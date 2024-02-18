@@ -3,6 +3,7 @@
     "hookform",
     "lucide",
     "Signin",
+    "tailwindcss",
     "trpc"
   ],
   "spellright.language": [

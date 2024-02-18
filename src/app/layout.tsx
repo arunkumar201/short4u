@@ -22,7 +22,7 @@ export default async function RootLayout({
     <html lang='en' className=''>
       <body className={cn('transition-colors duration-50 home-bg', poppins.className)}>
           <ThemeProviders>
-            <div className='fixed w-full px-3 py-3 md:px-20 bg-primary dark:bg-primary-foreground text-primary-foreground dark:text-primary '>
+            <div className='fixed z-50 w-full px-3 py-3 md:px-20 bg-primary dark:bg-primary-foreground text-primary-foreground dark:text-primary '>
               <NavBar />
             </div>
             <div className='w-full min-h-full'>{children}</div>
