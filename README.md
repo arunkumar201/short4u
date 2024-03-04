@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+
+### Architecture and System Design (HLD)
+<img width="1647" alt="Screenshot 2024-03-04 at 8 42 16 PM" src="https://github.com/arunkumar201/short4u/assets/70876302/19de1389-3f34-4e7b-985e-c1293c8e25d8">
+
+Link :-  https://www.canva.com/design/DAF7YAn0WVs/2CHyHkAzW8mnb7Ns2G-kyw/edit?utm_content=DAF7YAn0WVs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ## Getting Started
 
 First, run the development server:
