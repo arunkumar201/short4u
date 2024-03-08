@@ -30,10 +30,10 @@ export function NavBarOptions({ isMobile }: NavBarOptionsProps) {
         )}
       >
         {!isMobile ? (
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>
+          <NavigationMenuItem >
+            <NavigationMenuTrigger  className='' >
               Products</NavigationMenuTrigger>
-            <NavigationMenuContent  className='dark:bg-popover/40 bg-popover'>
+            <NavigationMenuContent className='dark:bg-popover/40 bg-popover'>
               <ul className='grid  w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
                 {Products.map((product) => (
                   <ListItem

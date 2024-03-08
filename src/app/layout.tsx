@@ -1,12 +1,12 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-import NavBar from '@/components/navbar/NavBar';
 import { Poppins } from 'next/font/google';
+import { ResponsiveWrapper } from '@/components/ResponsiveWrapper';
 import { ThemeProviders } from '@/context/ThemeContext';
 import { cn } from '@/lib/utils';
 
-const poppins = Poppins({ weight: '500', subsets: ['latin'] });
+const poppins = Poppins({ weight: '500',subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,13 +20,12 @@ export default async function RootLayout({
 }) {
   return (
     <html lang='en' className=''>
-      <body className={cn('transition-colors duration-50 home-bg', poppins.className)}>
-          <ThemeProviders>
-            <div className='fixed z-50 w-full px-3 py-3 md:px-20 bg-primary dark:bg-primary-foreground text-primary-foreground dark:text-primary '>
-              <NavBar />
-            </div>
-            <div className='w-full min-h-full'>{children}</div>
-          </ThemeProviders>
+      <body className={cn('transition-colors duration-50 home-bg',poppins.className)}>
+        <ThemeProviders>
+          <ResponsiveWrapper>
+              {children}
+          </ResponsiveWrapper>
+        </ThemeProviders>
       </body>
     </html>
   );
