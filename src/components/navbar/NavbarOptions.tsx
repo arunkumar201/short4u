@@ -1,6 +1,4 @@
-'use client';
-
-import * as React from 'react';
+'use client'
 
 import {
   NavigationMenu,
@@ -11,11 +9,11 @@ import {
 } from '@/components/ui/navigation-menu';
 
 import { ListItem } from '../ui/ListItem';
+import NavbarOptionsHelp from './NavbarOptionsHelp';
 import { Products } from '@/data/navbar';
 import { SheetClose } from '../ui/sheet';
 import SideNavOptions from './SideNavOptions';
 import { cn } from '@/lib/utils';
-import { useRouter } from 'next/navigation';
 
 interface NavBarOptionsProps {
   isMobile?: boolean;
@@ -60,7 +58,7 @@ export function NavBarOptions({ isMobile }: NavBarOptionsProps) {
           )}
         >
           {isMobile ? (
-            <SheetClose>
+            <SheetClose className='flex ps-2 ml-1'>
               <NavbarOptionsHelp isMobile={true} />
             </SheetClose>
           ) : (
@@ -71,27 +69,3 @@ export function NavBarOptions({ isMobile }: NavBarOptionsProps) {
     </NavigationMenu>
   );
 }
-
-export const NavbarOptionsHelp = ({ isMobile }: { isMobile?: boolean }) => {
-    const router = useRouter();
-  return (
-    <div className={cn('flex items-center justify-center ', isMobile && 'mt-4 flex flex-col')}>
-      <p
-         onClick={() => router.push('/pricing')}
-        className={cn('cursor-pointer md:text-base justify-center px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none ')}
-      > 
-          Pricing
-      </p>
-      <p
-        onClick={()=>router.push('/blog')}
-        className={" cursor-pointer text-sm md:text-base  justify-center px-4 py-2 font-medium transition-colors rounded-xl hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none "}>
-          Blog
-      </p>
-      <p
-        onClick={() => router.push('/support')}
-        className={" cursor-pointer text-sm md:text-base   justify-center px-4 py-2 font-medium transition-colors rounded-xl hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none "}>
-          Help
-      </p>
-    </div>
-  );
-};
