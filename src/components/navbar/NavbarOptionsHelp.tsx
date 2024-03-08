@@ -1,5 +1,6 @@
 import { BadgePercent, HelpCircleIcon, Rss } from 'lucide-react';
 
+import SocialIcons from '../SocialContact';
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 
@@ -47,6 +48,7 @@ const NavbarOptionsHelp = ({ isMobile }:INavbarOptionsHelp) => {
 					</span>
 				</p>
 			))}
+			{isMobile && <SocialIcons />}
 		</div>
 	);
 };
