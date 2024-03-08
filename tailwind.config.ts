@@ -1,4 +1,3 @@
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 /** @type {import('tailwindcss').Config} */
 import svgToDataUri from "mini-svg-data-uri";
 
@@ -96,7 +95,6 @@ module.exports = {
             )}")`,
           }),
         },
-        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
         
