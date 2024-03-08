@@ -12,7 +12,7 @@ export const ResponsiveWrapper = ({ children }: Props) => {
 				<div className='fixed  min-w-full z-50 md:top-2 md:mb-2 '>
 				<NavBar />
 				</div>
-				<div className="relative top-[4rem] ml-0 md:ml-32 mr-0 md:mr-32 md:px-8 md:py-2 px-3 py-3">
+				<div className="relative top-[5rem] ml-0 md:ml-32 mr-0 md:mr-32 md:px-8 md:py-2 px-3 py-3">
 				  {children}
 				</div>
 			</div>

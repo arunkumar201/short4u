@@ -11,7 +11,7 @@ export const NavbarLeftContent = (props: Props) => {
       <div className='relative z-50 block md:hidden'>
         <NavSideBar />
       </div>
-      <Link href={'/'} className='text-base uppercase md:text-xl'>
+      <Link href={'/'} className='text-base uppercase md:text-xl hover:text-gray-300'>
         Short4U
       </Link>
     </div>

@@ -19,8 +19,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className=''>
-      <body className={cn('transition-colors duration-50 home-bg',poppins.className)}>
+    <html lang='en' className='' suppressHydrationWarning>
+      <body className={cn('transition-colors duration-50 ',poppins.className)}>
         <ThemeProviders>
           <ResponsiveWrapper>
               {children}
