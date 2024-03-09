@@ -1,6 +1,7 @@
 import { BadgePercent, HelpCircleIcon, Rss } from 'lucide-react';
 
 import SocialIcons from '../SocialContact';
+import ThemeToggleBtn from '../ThemeToggleBtn';
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 
@@ -49,6 +50,7 @@ const NavbarOptionsHelp = ({ isMobile }:INavbarOptionsHelp) => {
 				</p>
 			))}
 			{isMobile && <SocialIcons />}
+			{isMobile && <ThemeToggleBtn moonStyle='bg-red-200 rounded-xl' sunStyle='dark:bg-gray-500 rounded-xl' className='p-4 fixed -bottom-0 left-[13rem]' />}
 		</div>
 	);
 };
