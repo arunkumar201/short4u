@@ -1,21 +1,22 @@
-import NavBar from './navbar/NavBar';
-import React from 'react';
+import React from "react";
+
+import NavBar from "./navbar/NavBar";
 
 type Props = {
-	children: React.ReactNode;
-}
+  children: React.ReactNode;
+};
 
 export const ResponsiveWrapper = ({ children }: Props) => {
-	return (
-		<div className='absolute inset-x-0 flex justify-center items-center'>
-			<div className='w-full '>
-				<div className='fixed  min-w-full z-50 md:top-2 md:mb-2 '>
-				<NavBar />
-				</div>
-				<div className="relative top-[5rem] ml-0 md:ml-32 mr-0 md:mr-32 md:px-8 md:py-2 px-3 py-3">
-				  {children}
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="absolute inset-x-0 flex justify-center items-center">
+      <div className="w-full ">
+        <div className="fixed  min-w-full z-50 md:top-2 md:mb-2 ">
+          <NavBar />
+        </div>
+        <div className="relative top-[5rem] ml-0 md:ml-32 mr-0 md:mr-32 md:px-8 md:py-2 px-3 py-3">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
 };

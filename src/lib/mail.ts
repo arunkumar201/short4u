@@ -20,7 +20,8 @@ export const sendVerificationEmail = async (email: string, token: string, url: s
             html: `<p>Click the link below to verify your email</p><p><a href="${link}">Verify</a></p>`
         });
     } catch (error) {
-		console.log(`Error while sending verification email: ${error}`);
+    // eslint-disable-next-line no-console
+		console.error(`Error while sending verification email: ${error}`);
 		return {error:"Something went wrong"}
     }
 };
@@ -36,7 +37,8 @@ const link = `${url}/auth/new-password?token=${token}`;
             html: `<p>Click the link below to Reset the Password </p><p><a href="${link}">Verify</a></p>`
         });
     } catch (error) {
-		console.log(`Error while sending verification email: ${error}`);
+		// eslint-disable-next-line no-console
+		console.error(`Error while sending verification email: ${error}`);
 		return {error:"Something went wrong"}
     }
     

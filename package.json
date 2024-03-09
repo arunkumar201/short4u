@@ -2,13 +2,18 @@
   "name": "next-auth-kit",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20",
+    "pnpm": "8.15.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
+    "format": "npx prettier --write .",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -40,10 +45,14 @@
     "@types/react-dom": "^18",
     "@types/tailwindcss": "^3.1.0",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-tailwindcss": "^3.14.3",
     "husky": "^8.0.3",
+    "lint-staged": "^15.2.2",
     "postcss": "^8",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "^0.5.10",

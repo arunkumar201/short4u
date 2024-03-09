@@ -16,11 +16,12 @@
     "plaintext",
     "typescript"
   ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit",
-    "editor.formatOnSave": "explicit",
-    "source.organizeImports": "explicit",
-    "source.fixAll.markdownlint": "explicit"
-  }
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "editor.codeActionsOnSaveTimeout": 5000
+        "source.fixAll.format": true
+    },
 }

@@ -1,3 +1,25 @@
 {
-  "extends": ["next", "prettier", "next/core-web-vitals"]
+  "extends": ["next", "prettier", "next/core-web-vitals"],
+  "plugins": ["prettier", "simple-import-sort", "tailwindcss"],
+  "parserOptions": {
+    "warnOnUnsupportedTypeScriptVersion": false,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "quotes": ["error", "double"],
+    "prettier/prettier": "error",
+    "no-console": "warn",
+    "simple-import-sort/imports": "error",
+    "no-duplicate-imports": "error",
+    "no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }],
+    "no-duplicate-case": "error",
+    "no-empty": "error",
+    "no-use-before-define": "error",
+    "class-methods-use-this": "error",
+    "no-dupe-keys": "error",
+    "no-dupe-args": "error",
+    "no-case-declarations": "error"
+  }
 }

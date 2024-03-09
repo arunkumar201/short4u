@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { ThemeProvider } from 'next-themes';
+import { ThemeProvider } from "next-themes";
 
 /**
  * Renders a set of theme providers.
@@ -10,12 +10,12 @@ import { ThemeProvider } from 'next-themes';
  * @return {React.ReactNode} The rendered theme providers.
  */
 export function ThemeProviders({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }): React.ReactNode {
   return (
-    <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
       {children}
     </ThemeProvider>
   );
