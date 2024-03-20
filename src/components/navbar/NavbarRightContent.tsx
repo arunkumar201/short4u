@@ -11,7 +11,7 @@ export const NavbarRightContent = () => {
       <Link href={"/login"}>
         <Button
           variant={"outline"}
-          className="px-3 py-0 text-sm md:p-4 md:text-inherit rounded-2xl dark:text-primary text-primary-foreground bg-primary dark:bg-primary-foreground"
+          className="px-3 py-0 text-sm md:p-4 md:text-inherit rounded-2xl dark:text-primary text-primary-foreground bg-primary dark:bg-primary-foreground hover:dark:bg-secondary"
         >
           Login
         </Button>
@@ -19,7 +19,7 @@ export const NavbarRightContent = () => {
       <Link href={"/Sign-up"}>
         <Button
           variant={"outline"}
-          className="px-2 py-0 text-sm md:p-4 md:text-inherit rounded-2xl dark:text-primary text-primary-foreground bg-primary dark:bg-primary-foreground "
+          className="px-2 py-0 text-sm md:p-4 md:text-inherit rounded-2xl dark:text-primary text-primary-foreground bg-primary dark:bg-primary-foreground hover:dark:bg-secondary"
         >
           Sign up{" "}
         </Button>

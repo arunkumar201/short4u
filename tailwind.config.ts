@@ -80,6 +80,7 @@ module.exports = {
     }
   },
   plugins: [
+    require("daisyui"),
     require("tailwindcss-animate"),
     function ({ addVariant, e, postcss }: any) {
       addVariant("firefox", ({ container, separator }: any) => {
