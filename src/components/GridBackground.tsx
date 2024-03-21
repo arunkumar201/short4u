@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-type T = any;
 interface IGridBackground {
   Comp: ReactNode;
   className?: string;
