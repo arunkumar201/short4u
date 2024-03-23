@@ -1,6 +1,6 @@
 import { Button } from "../ui/button";
 import HeroBg1 from "../../../public/hero/hero-bg.svg"
-import HeroMain from "../../../public/hero/heroMain.png"
+// import HeroMain from "../../../public/hero/heroMain.png"
 import Image from "next/image";
 import React from "react";
 export const Hero = () => {

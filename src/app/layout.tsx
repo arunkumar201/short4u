@@ -2,7 +2,6 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-
 import { ResponsiveWrapper } from "@/components/ResponsiveWrapper";
 import { ThemeProviders } from "@/context/ThemeContext";
 import { cn } from "@/lib/utils";
