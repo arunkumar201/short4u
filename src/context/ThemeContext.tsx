@@ -1,19 +1,23 @@
 "use client";
 
+import React,{ ReactNode,useState } from "react";
+
 import { ThemeProvider } from "next-themes";
 
-/**
- * Renders a set of theme providers.
- *
- * @param {Object} props - The properties object.
- * @param {React.ReactNode} props.children - The children to be rendered.
- * @return {React.ReactNode} The rendered theme providers.
- */
 export function ThemeProviders({
   children
 }: {
-  children: React.ReactNode;
-}): React.ReactNode {
+  children: ReactNode;
+}): JSX.Element | null {
+  const [isMounted,setIsMounted] = useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  },[]);
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
       {children}

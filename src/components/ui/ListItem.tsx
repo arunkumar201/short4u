@@ -1,9 +1,8 @@
 import { Bot, LayoutDashboard, Link } from "lucide-react";
 import React, { ReactNode } from "react";
 
-import { cn } from "@/lib/utils";
-
 import { NavigationMenuLink } from "./navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Icon: Record<string, ReactNode> = {
   Link: <Link />,
@@ -12,6 +11,7 @@ const Icon: Record<string, ReactNode> = {
 };
 export const ListItem = React.forwardRef<
   React.ElementRef<"a">,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   React.ComponentPropsWithoutRef<"a"> | any
 >(({ className, title, icon, isMobile, children, ...props }, ref) => {
   return (

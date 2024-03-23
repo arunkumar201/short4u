@@ -1,11 +1,8 @@
 import Link from "next/link";
+import { NavSideBar } from "./NavSideBar";
 import React from "react";
 
-import { NavSideBar } from "./NavSideBar";
-
-type Props = {};
-
-export const NavbarLeftContent = (_props: Props) => {
+export const NavbarLeftContent = () => {
   return (
     <div className="flex items-center justify-between mt-2 gap-x-2 md:mt-0">
       <div className="relative z-50 block md:hidden">
