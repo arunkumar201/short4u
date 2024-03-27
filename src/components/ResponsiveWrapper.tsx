@@ -1,5 +1,5 @@
-import NavBar from "./navbar/NavBar";
-import React from "react";
+import NavBar from './navbar/NavBar';
+import React from 'react';
 
 type Props = {
   children: React.ReactNode;
@@ -8,11 +8,11 @@ type Props = {
 export const ResponsiveWrapper = ({ children }: Props) => {
   return (
     <main className="absolute inset-x-0 flex justify-center items-center">
-      <div className="w-full ">
+      <div className="w-full h-svh dark:bg-[#070815] bg-gray-900/50">
         <div className="fixed  min-w-full z-50 md:top-2 md:mb-2 ">
           <NavBar />
         </div>
-        <div className="relative top-[5rem] ml-0 md:ml-32 mr-0 md:mr-32 md:px-8 md:py-2 px-3 py-3">
+        <div className="relative top-8 md:top-[5rem] ml-0 md:ml-32 mr-0 md:mr-32 md:px-8 md:py-2 -px-2 py-3 ">
           {children}
         </div>
       </div>
