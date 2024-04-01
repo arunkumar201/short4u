@@ -1,6 +1,6 @@
-import { NavbarLeftContent } from "./NavbarLeftContent";
-import { NavBarOptions } from "./NavbarOptions";
-import { NavbarRightContent } from "./NavbarRightContent";
+import { NavBarOptions } from './NavbarOptions';
+import { NavbarLeftContent } from './NavbarLeftContent';
+import { NavbarRightContent } from './NavbarRightContent';
 
 const NavBar = () => {
   return (
