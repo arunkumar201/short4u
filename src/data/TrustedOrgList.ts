@@ -1,4 +1,4 @@
-import { TrustedLogoProps } from '@/components/Hero/TrustedOrgList';
+import { TrustedLogoProps } from '@/components/hero/TrustedOrgList';
 import gfx from '../../public/hero/Gfx.webp';
 import next from '../../public/next.svg';
 import vercel from '../../public/vercel.svg';
