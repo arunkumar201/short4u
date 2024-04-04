@@ -1,15 +1,15 @@
-import React from "react";
-import { SiFacebook, SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import React from 'react';
+import { SiFacebook, SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
 
 import {
   FACEBOOK_USERNAME,
   GITHUB_USERNAME,
   LINKEDIN_USERNAME,
-  TWITTER_USERNAME
-} from "@/config";
+  TWITTER_USERNAME,
+} from '@/config';
 
 interface SocialIconProps {
-  icon: "facebook" | "twitter" | "linkedin" | "github";
+  icon: 'facebook' | 'twitter' | 'linkedin' | 'github';
   href: string;
 }
 
@@ -18,7 +18,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({ icon, href }) => {
     facebook: <SiFacebook />,
     twitter: <SiTwitter />,
     linkedin: <SiLinkedin />,
-    github: <SiGithub />
+    github: <SiGithub />,
   };
 
   return (
@@ -35,13 +35,13 @@ const SocialIcon: React.FC<SocialIconProps> = ({ icon, href }) => {
 
 const SocialIcons: React.FC = () => {
   const socialLinks = [
-    { icon: "facebook", href: `https://www.facebook.com/${FACEBOOK_USERNAME}` },
-    { icon: "twitter", href: `https://www.twitter.com/${TWITTER_USERNAME}` },
-    { icon: "linkedin", href: `https://www.linkedin.com/${LINKEDIN_USERNAME}` },
+    { icon: 'facebook', href: `https://www.facebook.com/${FACEBOOK_USERNAME}` },
+    { icon: 'twitter', href: `https://www.twitter.com/${TWITTER_USERNAME}` },
+    { icon: 'linkedin', href: `https://www.linkedin.com/${LINKEDIN_USERNAME}` },
     {
-      icon: "github",
-      href: `https://www.github.com/${GITHUB_USERNAME}/short4u`
-    }
+      icon: 'github',
+      href: `https://www.github.com/${GITHUB_USERNAME}/short4u`,
+    },
   ];
   return (
     <>
@@ -51,7 +51,7 @@ const SocialIcons: React.FC = () => {
           {socialLinks.map((link, index) => (
             <SocialIcon
               key={index}
-              icon={link.icon as SocialIconProps["icon"]}
+              icon={link.icon as SocialIconProps['icon']}
               href={link.href}
             />
           ))}

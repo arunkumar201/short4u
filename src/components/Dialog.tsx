@@ -1,6 +1,6 @@
 // Overlay.tsx
 
-import React from "react";
+import React from 'react';
 
 interface OverlayProps {
   message: string;

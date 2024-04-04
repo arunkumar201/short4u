@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import React,{ ReactNode,useState } from "react";
+import React, { ReactNode, useState } from 'react';
 
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from 'next-themes';
 
 export function ThemeProviders({
-  children
+  children,
 }: {
   children: ReactNode;
 }): JSX.Element | null {
-  const [isMounted,setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   React.useEffect(() => {
     setIsMounted(true);
-  },[]);
+  }, []);
 
   if (!isMounted) {
     return null;

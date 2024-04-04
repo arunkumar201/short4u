@@ -1,4 +1,4 @@
-import { ChevronDownCircle } from "lucide-react";
+import { ChevronDownCircle } from 'lucide-react';
 
 type FormSuccessProps = {
   message?: string;

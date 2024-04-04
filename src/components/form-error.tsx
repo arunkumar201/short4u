@@ -1,4 +1,4 @@
-import { Ban } from "lucide-react";
+import { Ban } from 'lucide-react';
 
 type FormErrorProps = {
   message?: string;

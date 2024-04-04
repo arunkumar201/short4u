@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuTrigger
-} from "@/components/ui/navigation-menu";
-import { Products } from "@/data/navbar";
-import { cn } from "@/lib/utils";
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+import { Products } from '@/data/navbar';
+import { cn } from '@/lib/utils';
 
-import { ListItem } from "../ui/ListItem";
-import { SheetClose } from "../ui/sheet";
-import NavbarOptionsHelp from "./NavbarOptionsHelp";
-import SideNavOptions from "./SideNavOptions";
+import { ListItem } from '../ui/ListItem';
+import { SheetClose } from '../ui/sheet';
+import NavbarOptionsHelp from './NavbarOptionsHelp';
+import SideNavOptions from './SideNavOptions';
 
 interface NavBarOptionsProps {
   isMobile?: boolean;
@@ -23,8 +23,8 @@ export function NavBarOptions({ isMobile }: NavBarOptionsProps) {
     <NavigationMenu>
       <NavigationMenuList
         className={cn(
-          "flex justify-between w-full gap-x-2",
-          isMobile && "flex-col"
+          'flex justify-between w-full gap-x-2',
+          isMobile && 'flex-col',
         )}
       >
         {!isMobile ? (
@@ -52,8 +52,8 @@ export function NavBarOptions({ isMobile }: NavBarOptionsProps) {
         )}
         <NavigationMenuItem
           className={cn(
-            "flex justify-between w-full gap-x-4",
-            isMobile && "flex-col"
+            'flex justify-between w-full gap-x-4',
+            isMobile && 'flex-col',
           )}
         >
           {isMobile ? (

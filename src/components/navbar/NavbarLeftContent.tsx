@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { NavSideBar } from "./NavSideBar";
-import React from "react";
+import Link from 'next/link';
+import { NavSideBar } from './NavSideBar';
+import React from 'react';
 
 export const NavbarLeftContent = () => {
   return (
@@ -9,7 +9,7 @@ export const NavbarLeftContent = () => {
         <NavSideBar />
       </div>
       <Link
-        href={"/"}
+        href={'/'}
         className="text-base uppercase md:text-xl hover:text-gray-300"
       >
         Short4U

@@ -2,12 +2,12 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger
-} from "@/components/ui/accordion";
-import { Products } from "@/data/navbar";
-import { cn } from "@/lib/utils";
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Products } from '@/data/navbar';
+import { cn } from '@/lib/utils';
 
-import { ListItem } from "../ui/ListItem";
+import { ListItem } from '../ui/ListItem';
 
 const SideNavOptions = () => {
   return (
@@ -20,7 +20,7 @@ const SideNavOptions = () => {
       >
         <AccordionItem value="item-1">
           <AccordionTrigger className="-mb-3 focus:outline-none ">
-            <p className={cn("nav-menu")}>Products</p>
+            <p className={cn('nav-menu')}>Products</p>
           </AccordionTrigger>
           <AccordionContent className="">
             <AccordionItem

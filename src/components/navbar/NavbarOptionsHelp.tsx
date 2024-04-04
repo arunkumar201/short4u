@@ -1,10 +1,10 @@
-import { BadgePercent, HelpCircleIcon, Rss } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { BadgePercent, HelpCircleIcon, Rss } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
-import SocialIcons from "../SocialContact";
-import ThemeToggleBtn from "../ThemeToggleBtn";
+import SocialIcons from '../SocialContact';
+import ThemeToggleBtn from '../ThemeToggleBtn';
 
 interface INavbarOptionsHelp {
   isMobile?: boolean;
@@ -18,27 +18,27 @@ const NavbarOptionsHelp = ({ isMobile }: INavbarOptionsHelp) => {
 
   const options = [
     {
-      label: "Pricing",
+      label: 'Pricing',
       icon: <BadgePercent size={30} />,
-      path: "/pricing"
+      path: '/pricing',
     },
     {
-      label: "Blog",
+      label: 'Blog',
       icon: <Rss size={30} />,
-      path: "/blog"
+      path: '/blog',
     },
     {
-      label: "Help",
+      label: 'Help',
       icon: <HelpCircleIcon size={30} />,
-      path: "/support"
-    }
+      path: '/support',
+    },
   ];
 
   return (
     <div
       className={cn(
-        "flex items-center justify-center ",
-        isMobile && "mt-4 flex flex-col"
+        'flex items-center justify-center ',
+        isMobile && 'mt-4 flex flex-col',
       )}
     >
       {options.map(option => (
@@ -46,8 +46,8 @@ const NavbarOptionsHelp = ({ isMobile }: INavbarOptionsHelp) => {
           key={option.label}
           onClick={() => handleClick(option.path)}
           className={cn(
-            "cursor-pointer md:text-base justify-center px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none",
-            isMobile && "w-[13rem] md:text-base px-4 py-2"
+            'cursor-pointer md:text-base justify-center px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none',
+            isMobile && 'w-[13rem] md:text-base px-4 py-2',
           )}
         >
           <span className="flex flex-row items-center gap-2 justify-start">

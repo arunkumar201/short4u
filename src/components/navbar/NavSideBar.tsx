@@ -1,8 +1,8 @@
-import { Menu } from "lucide-react";
+import { Menu } from 'lucide-react';
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
-import { NavBarOptions } from "./NavbarOptions";
+import { NavBarOptions } from './NavbarOptions';
 
 export const NavSideBar = () => {
   return (
@@ -18,7 +18,7 @@ export const NavSideBar = () => {
             className="dark:text-primary text-primary-foreground"
           />
         </SheetTrigger>
-        <SheetContent side={"left"} className="max-w-[18rem]">
+        <SheetContent side={'left'} className="max-w-[18rem]">
           <div className="flex flex-row ">
             <NavBarOptions isMobile={true} />
           </div>
