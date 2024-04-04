@@ -1,5 +1,5 @@
 import FreeShortHookBlock from '@/components/short-container/FreeShortHookBlock';
-import { Hero } from '../components/hero/Hero';
+import { Hero } from '@/components/hero/Hero';
 import { OurStats } from '@/components/hero/OurStats';
 import TrustedOrgList from '@/components/hero/TrustedOrgList';
 
