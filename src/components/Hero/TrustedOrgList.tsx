@@ -9,7 +9,7 @@ export type TrustedLogoProps = {
   href: string;
 };
 
-export default function TrustedOrgList() {
+export function TrustedOrgList() {
   return (
     <div className="w-full py-6 md:py-8 bg-slate-300 dark:bg-primary/60 mt-4 rounded-2xl text-center flex justify-center items-center shadow-inner shadow-teal-300 dark:shadow-[#FFD700]">
       <div className="container w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6">
