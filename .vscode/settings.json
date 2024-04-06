@@ -10,9 +10,11 @@
     "hookform",
     "llline",
     "lucide",
+    "ratelimit",
     "Signin",
     "tailwindcss",
-    "trpc"
+    "trpc",
+    "upstash"
   ],
   "spellright.language": [
     "en"
