@@ -5,7 +5,7 @@ import React from 'react';
 export const NavbarLeftContent = () => {
   return (
     <div className="flex items-center justify-between mt-2 gap-x-2 md:mt-0">
-      <div className="relative z-50 block md:hidden">
+      <div className="relative z-[100] block md:hidden">
         <NavSideBar />
       </div>
       <Link

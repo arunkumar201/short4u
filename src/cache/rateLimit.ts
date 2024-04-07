@@ -19,15 +19,16 @@ if (process.env.UPSTASH_REDIS_REST_URL) {
   });
 }
 
-export async function rateLimitMiddleware(
-  req: NextRequest,
-): Promise<Response | undefined> {
-  const ip = req.headers.get('X-Forwarded-For') ?? req.headers.get('x-real-ip') ?? req.ip;
+export async function rateLimitMiddleware(req: NextRequest): Promise<Response> {
+  const ip =
+    req.headers.get('X-Forwarded-For') ??
+    req.headers.get('x-real-ip') ??
+    req.ip;
   if (!ip) return NextResponse.json({ error: 'IP not found' }, { status: 400 });
   const { success, limit, remaining, reset } = await ratelimit.limit(ip);
   if (!success)
-    return NextResponse.json({ error: 'Too many requests' },{ status: 429 });
-  
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+
   return NextResponse.next({
     headers: {
       'X-RateLimit-Limit': limit.toString(),

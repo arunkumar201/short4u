@@ -7,20 +7,20 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
-import { Products } from '@/data/navbar';
-import { cn } from '@/lib/utils';
 
 import { ListItem } from '../ui/ListItem';
-import { SheetClose } from '../ui/sheet';
 import NavbarOptionsHelp from './NavbarOptionsHelp';
+import { Products } from '@/data/navbar';
+import { SheetClose } from '../ui/sheet';
 import SideNavOptions from './SideNavOptions';
+import { cn } from '@/lib/utils';
 
 interface NavBarOptionsProps {
   isMobile?: boolean;
 }
 export function NavBarOptions({ isMobile }: NavBarOptionsProps) {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="relative z-[100]">
       <NavigationMenuList
         className={cn(
           'flex justify-between w-full gap-x-2',
