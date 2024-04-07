@@ -3,7 +3,6 @@ import './globals.css';
 import { DM_Sans } from 'next/font/google';
 import type { Metadata } from 'next';
 import { ResponsiveWrapper } from '@/components/ResponsiveWrapper';
-import { ThemeProviders } from '@/context/ThemeContext';
 import { cn } from '@/lib/utils';
 
 const poppins = DM_Sans({ weight: '500', subsets: ['latin'] });
@@ -21,9 +20,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="" suppressHydrationWarning>
       <body className={cn('transition-colors duration-50 ', poppins.className)}>
-        <ThemeProviders>
-          <ResponsiveWrapper>{children}</ResponsiveWrapper>
-        </ThemeProviders>
+        <ResponsiveWrapper>{children}</ResponsiveWrapper>
       </body>
     </html>
   );

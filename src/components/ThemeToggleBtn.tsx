@@ -1,11 +1,10 @@
 'use client';
 
-import { useTheme } from 'next-themes';
-import { useState } from 'react';
 import { CiDark } from 'react-icons/ci';
 import { HiSun } from 'react-icons/hi';
-
 import { cn } from '@/lib/utils';
+import { useState } from 'react';
+import { useTheme } from 'next-themes';
 
 interface IThemeToggleBtn {
   className?: string;
@@ -17,7 +16,7 @@ const ThemeToggleBtn: React.FC<IThemeToggleBtn> = ({
   moonStyle,
   sunStyle,
 }) => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme: theme, setTheme } = useTheme();
 
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     return theme === 'dark';
