@@ -1,6 +1,19 @@
 import { BookUser, BotIcon, Link2, QrCodeIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
+import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
+
+const ShortLinkWrapper = dynamic(
+  () => import('./short-link/ShortLinkWrapper'),
+  {
+    ssr: true,
+  },
+);
+const QRCodeWrapper = dynamic(() => import('./short-link/QRCodeWrapper'), {
+  ssr: true,
+});
+
 export const ShortLinkTabs = async () => {
   return (
     <div className="grid w-full gap-4">
@@ -27,40 +40,24 @@ export const ShortLinkTabs = async () => {
           value="short-link"
           className="text-gray-50 dark:text-zinc-50"
         >
-          <div className="text-gray-50 dark:text-zinc-50">
-            <div>
-              <div className="text-gray-800 dark:text-zinc-50text-gray-800 dark:text-zinc-50 p-4">
-                <p>Welcome to the Short Link tab. This is your feed.</p>
-              </div>
-            </div>
-          </div>
+          <Suspense fallback={<h1 className="text-gray-700">Loading...</h1>}>
+            <ShortLinkWrapper />
+          </Suspense>
         </TabsContent>
         <TabsContent value="qr-code">
-          <div className="">
-            <div>
-              <div className="text-gray-800 dark:text-zinc-50text-gray-800 dark:text-zinc-50 p-4">
-                <p>Check out your QR,in the QR CODE tab.</p>
-              </div>
-            </div>
-          </div>
+          <Suspense fallback={<h1 className="text-gray-700">Loading...</h1>}>
+            <QRCodeWrapper />
+          </Suspense>
         </TabsContent>
         <TabsContent value="ai-shortener">
-          <div className="">
-            <div>
-              <div className="text-gray-800 dark:text-zinc-50text-gray-800 dark:text-zinc-50 p-4">
-                <p>AI Shortener.</p>
-              </div>
-            </div>
-          </div>
+          <Suspense fallback={<h1 className="text-gray-700">Loading...</h1>}>
+            <ShortLinkWrapper />
+          </Suspense>
         </TabsContent>
         <TabsContent value="link-in-bio">
-          <div className="">
-            <div>
-              <div className="text-gray-800 dark:text-zinc-50text-gray-800 dark:text-zinc-50 p-4">
-                <p>Link in Bio.</p>
-              </div>
-            </div>
-          </div>
+          <Suspense fallback={<h1 className="text-gray-700">Loading...</h1>}>
+            <ShortLinkWrapper />
+          </Suspense>
         </TabsContent>
       </Tabs>
     </div>

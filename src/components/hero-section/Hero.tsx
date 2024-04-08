@@ -10,11 +10,11 @@ export const Hero = () => {
         <div className="w-full md:w-[52%] flex flex-col justify-center items-start gap-4">
           <Button
             variant={'outline'}
-            className="w-full md:w-fit text-sm md:p-4 tracking-wide  rounded-xl dark:text-secondary-foreground text-accent bg-accent-foreground dark:bg-primary-foreground hover:dark:bg-secondary"
+            className="subpixel-antialiased w-full md:w-fit text-sm md:p-4 tracking-wide  rounded-xl dark:text-secondary-foreground text-accent bg-accent-foreground dark:bg-primary-foreground hover:dark:bg-secondary"
           >
             {'✨✨ AI-Enhanced Link Shortener & Analytics Platform.🤖✨'}
           </Button>
-          <div>
+          <div className="antialiased">
             <p className="text-3xl subpixel-antialiased	 font-bold md:text-3xl tracking-wide leading-snug sm:text-2xl xl:text-4xl/none">
               <p>
                 The{' '}
@@ -27,7 +27,7 @@ export const Hero = () => {
             </p>
           </div>
           <article className="text-sm ">
-            <span>
+            <span className="leading-6 antialiased ">
               On one comprehensive platform,you&apos;ll need to connect audience
               on a Global Scale!. Elevate your link management with AI-driven
               features, advanced ML analytics, and unparalleled brand
