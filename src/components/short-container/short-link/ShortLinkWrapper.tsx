@@ -1,12 +1,14 @@
 import React from 'react';
 import ShortHookContainer from '../ShortHookContainer';
+import {ShortUrlInput} from '../ShortUrlInput';
 import { sleep } from '@/utils';
 
 const ShortLinkWrapper = async () => {
-  await sleep(10000);
+  await sleep(1000);
   return (
     <ShortHookContainer>
-      <h1 className="text-gray-800">welcome to Short link widget </h1>
+      <h1 className='font-sans text-xl font-bold tracking-wider '>Shorten a Long URL</h1>
+      <ShortUrlInput/>
     </ShortHookContainer>
   );
 };

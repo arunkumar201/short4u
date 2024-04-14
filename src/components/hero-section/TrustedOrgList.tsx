@@ -11,10 +11,10 @@ export type TrustedLogoProps = {
 
 export function TrustedOrgList() {
   return (
-    <div className="w-full py-6 md:py-8 bg-slate-300 dark:bg-primary/60 mt-4 rounded-2xl text-center flex justify-center items-center shadow-inner shadow-teal-300 dark:shadow-[#FFD700]">
-      <div className="container w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6">
+    <div className="w-full min-h-fit py-6 md:py-8 bg-slate-300 dark:bg-primary/60 mt-4 rounded-2xl text-center flex justify-center items-center shadow-inner shadow-teal-300 dark:shadow-[#FFD700]">
+      <div className="mb-4 container w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-secondary dark:text-secondary-foreground">
             Trusted by the Best
           </h2>
           <p className="mx-auto max-w-3xl text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-50">

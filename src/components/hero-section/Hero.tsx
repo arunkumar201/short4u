@@ -1,6 +1,7 @@
 import { Button } from '../ui/button';
 import HeroMain from '../../../public/hero/main-hero.svg';
 import Image from 'next/image';
+import { MovingBorderButton } from '../ui/moving-border';
 import React from 'react';
 export const Hero = () => {
   return (
@@ -8,12 +9,12 @@ export const Hero = () => {
       <section className="flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0">
         {/* Left Content  */}
         <div className="w-full md:w-[52%] flex flex-col justify-center items-start gap-4">
-          <Button
-            variant={'outline'}
-            className="subpixel-antialiased w-full md:w-fit text-sm md:p-4 tracking-wide  rounded-xl dark:text-secondary-foreground text-accent bg-accent-foreground dark:bg-primary-foreground hover:dark:bg-secondary"
+          <MovingBorderButton
+            containerClassName='w-full md:w-fit h-15'
+            className="subpixel-antialiased border-gray-600 w-full h-12 md:w-fit text-sm  tracking-wide  rounded-xl dark:text-secondary-foreground text-accent-foreground bg-accent dark:bg-primary-foreground hover:dark:bg-secondary"
           >
             {'✨✨ AI-Enhanced Link Shortener & Analytics Platform.🤖✨'}
-          </Button>
+          </MovingBorderButton>
           <div className="antialiased">
             <p className="text-3xl subpixel-antialiased	 font-bold md:text-3xl tracking-wide leading-snug sm:text-2xl xl:text-4xl/none">
               <p>

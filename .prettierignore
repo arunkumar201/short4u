@@ -44,3 +44,4 @@ package-lock.json
 yarn.lock
 server
 README.md
+package.json

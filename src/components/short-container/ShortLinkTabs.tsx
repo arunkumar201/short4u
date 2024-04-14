@@ -1,63 +1,47 @@
 import { BookUser, BotIcon, Link2, QrCodeIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import { AiShortenerWrapper } from './short-link/AiShortenerWrapper';
+import { LinkInBioWrapper } from './short-link/LinkInBioWrapper';
+import QRCodeWrapper from './short-link/QRCodeWrapper';
+import ShortLinkWrapper from './short-link/ShortLinkWrapper';
 
-const ShortLinkWrapper = dynamic(
-  () => import('./short-link/ShortLinkWrapper'),
-  {
-    ssr: true,
-  },
-);
-const QRCodeWrapper = dynamic(() => import('./short-link/QRCodeWrapper'), {
-  ssr: true,
-});
-
-export const ShortLinkTabs = async () => {
+export const ShortLinkTabs = () => {
   return (
     <div className="grid w-full gap-4">
       <Tabs defaultValue="short-link" className="p-2">
-        <TabsList className="flex space-x-4 rounded-2xl px-3 py-5">
-          <TabsTrigger value="short-link" className="rounded-2xl ">
-            <Link2 className="h-4 w-4" />
-            <span className="ml-2">Short Link</span>
+        <TabsList className="flex space-x-4 rounded-2xl px-3 py-5  text-[#144272]  dark:text-[#FBF8DD] font-semibold bg-inherit dark:bg-inherit">
+          <TabsTrigger value="short-link" className="rounded-2xl text-base font-normal text-balance">
+            <Link2 className="h-6 w-6" />
+            <span className="ml-1">Short Link</span>
           </TabsTrigger>
-          <TabsTrigger value="qr-code" className="rounded-2xl">
-            <QrCodeIcon className="h-4 w-4" />
-            <span className="ml-2">QR Code</span>
+          <TabsTrigger value="qr-code" className="rounded-2xl text-base font-normal text-balance">
+            <QrCodeIcon className="h-5 w-5" />
+            <span className="ml-1">QR Code</span>
           </TabsTrigger>
-          <TabsTrigger value="ai-shortener" className="rounded-2xl">
-            <BotIcon className="h-4 w-4" />
-            <span className="ml-2">AI Shortener</span>
+          <TabsTrigger value="ai-shortener" className="rounded-2xl text-base font-normal text-balance">
+            <BotIcon className="h-6 w-6" />
+            <span className="ml-1">AI Shortener</span>
           </TabsTrigger>
-          <TabsTrigger value="link-in-bio" className="rounded-2xl">
-            <BookUser className="h-4 w-4" />
-            <span className="ml-2">Link-in-bio</span>
+          <TabsTrigger value="link-in-bio" className="rounded-2xl text-base font-normal text-balance">
+            <BookUser className="h-6 w-6" />
+            <span className="ml-1">Link-in-bio</span>
           </TabsTrigger>
         </TabsList>
         <TabsContent
           value="short-link"
           className="text-gray-50 dark:text-zinc-50"
         >
-          <Suspense fallback={<h1 className="text-gray-700">Loading...</h1>}>
-            <ShortLinkWrapper />
-          </Suspense>
+          <ShortLinkWrapper />
         </TabsContent>
         <TabsContent value="qr-code">
-          <Suspense fallback={<h1 className="text-gray-700">Loading...</h1>}>
-            <QRCodeWrapper />
-          </Suspense>
+          <QRCodeWrapper />
         </TabsContent>
         <TabsContent value="ai-shortener">
-          <Suspense fallback={<h1 className="text-gray-700">Loading...</h1>}>
-            <ShortLinkWrapper />
-          </Suspense>
+          <AiShortenerWrapper />
         </TabsContent>
         <TabsContent value="link-in-bio">
-          <Suspense fallback={<h1 className="text-gray-700">Loading...</h1>}>
-            <ShortLinkWrapper />
-          </Suspense>
+          <LinkInBioWrapper />
         </TabsContent>
       </Tabs>
     </div>
