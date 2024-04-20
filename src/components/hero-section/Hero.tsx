@@ -6,7 +6,7 @@ import React from 'react';
 export const Hero = () => {
   return (
     <>
-      <section className="flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0">
+      <section className="flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0 prose ">
         {/* Left Content  */}
         <div className="w-full md:w-[52%] flex flex-col justify-center items-start gap-4">
           <MovingBorderButton
@@ -28,7 +28,7 @@ export const Hero = () => {
             </p>
           </div>
           <article className="text-sm ">
-            <span className="leading-6 antialiased ">
+            <span className="leading-6 antialiased max-w-prose">
               On one comprehensive platform,you&apos;ll need to connect audience
               on a Global Scale!. Elevate your link management with AI-driven
               features, advanced ML analytics, and unparalleled brand

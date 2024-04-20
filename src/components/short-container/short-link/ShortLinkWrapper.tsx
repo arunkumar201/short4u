@@ -7,7 +7,7 @@ const ShortLinkWrapper = async () => {
   await sleep(1000);
   return (
     <ShortHookContainer>
-      <h1 className='font-sans text-xl font-bold tracking-wider '>Shorten a Long URL</h1>
+      <h1 className='font-sans text-2xl font-bold tracking-wider'>Shorten a Long URL</h1>
       <ShortUrlInput/>
     </ShortHookContainer>
   );
