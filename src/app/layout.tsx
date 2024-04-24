@@ -1,11 +1,12 @@
 import './globals.css';
 
+import { AOSInit } from '@/aos';
 import { DM_Sans } from 'next/font/google';
 import type { Metadata } from 'next';
 import { ResponsiveWrapper } from '@/components/ResponsiveWrapper';
 import { cn } from '@/lib/utils';
 
-const poppins = DM_Sans({ weight: '500', subsets: ['latin'] });
+const poppins = DM_Sans({ weight: '500',subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +20,8 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" className="" suppressHydrationWarning>
-      <body className={cn('transition-colors duration-50 ', poppins.className)}>
+      <AOSInit />
+      <body className={cn('transition-colors duration-50 ',poppins.className)}>
         <ResponsiveWrapper>{children}</ResponsiveWrapper>
       </body>
     </html>
