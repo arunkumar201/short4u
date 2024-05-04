@@ -1,6 +1,10 @@
 **/*.log
 **/.DS_Store
 *.
+**/*.log
+**/.DS_Store
+*.
+dist
 dist
 node_modules
 .vscode
