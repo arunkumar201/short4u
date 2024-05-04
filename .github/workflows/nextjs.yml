@@ -33,12 +33,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Add pnpm to PATH
+        run: |
+             export PATH=$HOME/.npm-global/bin:$PATH
       - name: Install pnpm
         run: |
           npm install -g pnpm
-           - name: Add pnpm to PATH
-          run: |
-             export PATH=$HOME/.npm-global/bin:$PATH
+          
       - name: Detect package manager
         id: detect-package-manager
         run: |
