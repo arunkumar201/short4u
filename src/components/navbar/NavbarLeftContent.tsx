@@ -10,7 +10,7 @@ export const NavbarLeftContent = () => {
       </div>
       <Link
         href={'/'}
-        className="text-base uppercase md:text-xl hover:text-gray-300"
+        className="text-base uppercase md:text-xl  hover:text-gray-900/40 dark:hover:text-gray-300 "
       >
         Short4U
       </Link>

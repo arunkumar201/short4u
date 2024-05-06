@@ -11,7 +11,7 @@ export const Hero = () => {
         <div className="w-full md:w-[52%] flex flex-col justify-center items-start gap-4">
           <MovingBorderButton
             containerClassName='w-full md:w-fit h-15'
-            className="subpixel-antialiased border-gray-600 w-full h-12 md:w-fit text-sm  tracking-wide  rounded-xl dark:text-secondary-foreground text-accent-foreground bg-accent dark:bg-primary-foreground hover:dark:bg-secondary"
+            className="p-3 subpixel-antialiased border-gray-600 w-full h-12 md:w-fit text-sm  tracking-wide  rounded-xl dark:text-secondary-foreground text-accent-foreground bg-accent dark:bg-primary-foreground hover:dark:bg-secondary"
           >
             {'✨✨ AI-Enhanced Link Shortener & Analytics Platform.🤖✨'}
           </MovingBorderButton>
