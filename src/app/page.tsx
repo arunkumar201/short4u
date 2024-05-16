@@ -4,12 +4,12 @@ import { OurStats } from '@/components/hero-section/OurStats';
 import { TrustedOrgList } from '@/components/hero-section/TrustedOrgList';
 
 export default async function Home() {
-  return (
-    <main className="h-svh">
-      <Hero />
-      <OurStats />
-      <FreeShortHookBlock />
-      <TrustedOrgList />
-    </main>
-  );
+    return (
+        <>
+            <Hero />
+            <OurStats />
+            <FreeShortHookBlock />
+            <TrustedOrgList />
+        </>
+    );
 }
