@@ -2,6 +2,7 @@ import { FreeShortHookBlock } from '@/components/short-container/FreeShortHookBl
 import { Hero } from '@/components/hero-section/Hero';
 import { OurStats } from '@/components/hero-section/OurStats';
 import { TrustedOrgList } from '@/components/hero-section/TrustedOrgList';
+import Footer from '@/components/footer/Footer';
 
 export default async function Home() {
     return (
@@ -10,6 +11,7 @@ export default async function Home() {
             <OurStats />
             <FreeShortHookBlock />
             <TrustedOrgList />
+            <Footer />
         </>
     );
 }
