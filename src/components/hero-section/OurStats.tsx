@@ -4,7 +4,7 @@ export const OurStats = async () => {
     const totalCustomer = 10;
     const redirect_per_day = 100;
     return (
-        <section className="md:mt-4 overflow-hidden mt-9 w-full dark:bg-primary-foreground bg-secondary-foreground p-3 rounded-2xl shadow-inner shadow-teal-300 dark:shadow-[#FFD700]">
+        <section className="md:mt-4 overflow-hidden mt-9 w-full  p-3 rounded-2xl">
             <h1 className=" w-full mt-3 text-xl/relaxed md:text-3xl/relaxed flex justify-center items-center gap-1 text-accent dark:text-secondary-foreground bg-cover bg-center relative">
                 <BarChartBig />
                 <span className="capitalize tracking-wider relative z-40 text-2xl md:text-3xl">
