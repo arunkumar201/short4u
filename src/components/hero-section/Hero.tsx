@@ -1,24 +1,23 @@
 import { Button } from '../ui/button';
 import HeroMain from '../../../public/hero/main-hero.svg';
-import Image from 'next/image';
 import { MovingBorderButton } from '../ui/moving-border';
 import React from 'react';
 export const Hero = () => {
     return (
         <>
-            <section className="flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0 prose ">
+            <section className="relative flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0 prose">
                 {/* Left Content  */}
                 <div className="w-full md:w-[52%] flex flex-col justify-center items-start gap-4">
                     <MovingBorderButton
                         containerClassName="w-full md:w-fit h-15"
-                        className="p-3 subpixel-antialiased border-gray-600 w-full h-12 md:w-fit text-sm  tracking-wide  rounded-xl dark:text-secondary-foreground text-accent-foreground bg-accent dark:bg-primary-foreground hover:dark:bg-secondary"
+                        className="p-3 subpixel-antialiased border-gray-600 w-full h-16 md:h-12  md:w-fit text-sm  tracking-wide  rounded-xl dark:text-secondary-foreground text-accent-foreground bg-accent dark:bg-primary-foreground hover:dark:bg-secondary"
                     >
                         {
                             '✨✨ AI-Enhanced Link Shortener & Analytics Platform.🤖✨'
                         }
                     </MovingBorderButton>
                     <div className="antialiased">
-                        <p className="text-3xl subpixel-antialiased	 font-bold md:text-3xl tracking-wide leading-snug sm:text-2xl xl:text-4xl/none">
+                        <p className="text-3xl subpixel-antialiased	font-bold md:text-3xl tracking-wide leading-snug sm:text-2xl xl:text-4xl/none md:text-start text-center">
                             <p>
                                 The{' '}
                                 <span className="decoration-amber-400 decoration-dotted underline decoration-[3px] hover:rounded-xl hover:h-3 hover:bg-zinc-600/50 hover:dark:bg-secondary/50 cursor-pointer">
@@ -31,7 +30,7 @@ export const Hero = () => {
                             </p>
                         </p>
                     </div>
-                    <article className="text-sm ">
+                    <article className="text-sm md:text-start text-center">
                         <span className="leading-6 antialiased max-w-prose">
                             On one comprehensive platform,you&apos;ll need to
                             connect audience on a Global Scale!. Elevate your
@@ -54,20 +53,13 @@ export const Hero = () => {
                 </div>
                 {/* Right content */}
                 <div
-                    className={`h-full bg-scroll w-full md:w-[45%] md:mt-3 flex justify-center items-center `}
+                    className={`h-full bg-scroll w-full md:w-[48%] flex justify-center mt-4 items-center`}
                 >
-                    <div>
-                        <Image
-                            src={HeroMain}
-                            className="md:w-[53rem] md:h-[29rem] w-full h-full  "
-                            width={400}
-                            height={500}
-                            quality={100}
-                            priority={true}
-                            aria-description="Banner Image- short4u"
-                            alt="hero image"
-                        />
-                    </div>
+                    <div
+                        className="md:h-[27rem] w-full h-full object-cover bg-transparent  bg-center relative items-center flex"
+                        style={{ backgroundImage: `url(${HeroMain.src})` }}
+                        aria-description="Banner Image- short4u"
+                    ></div>
                 </div>
             </section>
         </>

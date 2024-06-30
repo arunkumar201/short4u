@@ -1,5 +1,5 @@
-import NavBar from './navbar/NavBar';
 import { NextThemeProvider } from '@/context/ThemeContext';
+import NavBar from './navbar/NavBar';
 import React from 'react';
 
 type Props = {
@@ -8,15 +8,13 @@ type Props = {
 
 export const ResponsiveWrapper = async ({ children }: Props) => {
     return (
-        <main className="absolute h-auto inset-x-0 flex justify-center items-center bg-gray-200 dark:bg-gray-800">
+        <main className="absolute inset-x-0 flex justify-center items-center md:m-32 m-2">
             <NextThemeProvider>
-                <div className="top-0 dark:bg-opacity-30 bg-opacity-30 backdrop-filter backdrop-blur-lg dark:backdrop-blur-xl fixed min-w-full md:top-2 md:mb-7 z-[100]">
+                <div className="top-0 fixed min-w-full md:top-2 md:mb-7 z-[100]">
                     <NavBar />
                 </div>
-                <main className="w-full px-5 relative min-h-full">
-                    <div className="absolute top-8 md:top-[4rem] ml-0 md:ml-32 mr-0 md:mr-32 md:px-8 md:py-2 -px-2 py-3 mx-8 my-8">
-                        {children}
-                    </div>
+                <main className="p-0 md:p-4 w-full  relative min-h-screen top-[4rem] md:top-[-2rem]">
+                    {children}
                 </main>
             </NextThemeProvider>
         </main>
