@@ -56,7 +56,7 @@ export const Hero = () => {
                     className={`h-full bg-scroll w-full md:w-[48%] flex justify-center mt-4 items-center`}
                 >
                     <div
-                        className="md:h-[27rem] w-full h-full object-cover bg-transparent  bg-center relative items-center flex"
+                        className="md:h-[27rem] w-full h-full object-cover overflow-hidden bg-no-repeat bg-transparent  bg-center relative items-center flex"
                         style={{ backgroundImage: `url(${HeroMain.src})` }}
                         aria-description="Banner Image- short4u"
                     ></div>
