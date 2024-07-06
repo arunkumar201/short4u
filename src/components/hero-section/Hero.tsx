@@ -5,7 +5,7 @@ import React from 'react';
 export const Hero = () => {
     return (
         <>
-            <section className="relative flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0 prose">
+            <section className="relative z-50 flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0 prose">
                 {/* Left Content  */}
                 <div className="w-full md:w-[52%] flex flex-col justify-center items-start gap-4">
                     <MovingBorderButton
