@@ -1,11 +1,14 @@
-import { Button } from '../ui/button';
 import HeroMain from '../../../public/hero/main-hero.svg';
 import { MovingBorderButton } from '../ui/moving-border';
 import React from 'react';
+import { RetroGrid } from '../RetroGrid';
+import { Blur } from '../Blur';
+import { ShimmerButton } from '../ShimmerButton';
+import Link from 'next/link';
 export const Hero = () => {
     return (
         <>
-            <section className="relative z-50 flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0 prose">
+            <section className="relative z-[200] flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0 prose">
                 {/* Left Content  */}
                 <div className="w-full md:w-[52%] flex flex-col justify-center items-start gap-4">
                     <MovingBorderButton
@@ -20,7 +23,7 @@ export const Hero = () => {
                         <p className="text-3xl subpixel-antialiased	font-bold md:text-3xl tracking-wide leading-snug sm:text-2xl xl:text-4xl/none md:text-start text-center">
                             <p>
                                 The{' '}
-                                <span className="decoration-amber-400 decoration-dotted underline decoration-[3px] hover:rounded-xl hover:h-3 hover:bg-zinc-600/50 hover:dark:bg-secondary/50 cursor-pointer">
+                                <span className="gradient-text decoration-[#0E5CAD] decoration-dotted underline decoration-[3px] hover:rounded-xl hover:h-3 hover:bg-zinc-600/50 hover:dark:bg-secondary/50 cursor-pointer">
                                     AI-Powered URL Shortener &amp; Analytics
                                     Platform
                                 </span>
@@ -40,16 +43,26 @@ export const Hero = () => {
                         </span>
                     </article>
                     <div className="flex flex-row gap-x-4 w-full justify-center md:justify-start items-center ">
-                        <Button className="text-sm md:text-base md:p-4 p-3 tracking-wide  rounded-xl text-secondary-foreground bg-[#2A5BD6]/80 hover:bg-[#2A5BD6]">
-                            Get Started For Free
-                        </Button>
-                        <Button
-                            className="text-sm md:text-base md:p-4 p-3 tracking-wide rounded-xl text-zinc-900 bg-accent-foreground hover:bg-inherit dark:bg-accent dark:text-secondary-foreground "
-                            variant={'outline'}
-                        >
-                            Get Quote
-                        </Button>
+                        <Link href="/" className="w-full sm:w-max ">
+                            <ShimmerButton className="relative w-full sm:w-max flex items-center justify-center transition-all  hover:shadow-[0_0_0_3px_rgba(255,255,255,0.3)_inset] bg-gradient-to-r from-blue-300 to-yellow-300 ">
+                                <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-white z-10">
+                                    Get Started For Free
+                                </span>
+                            </ShimmerButton>
+                        </Link>
+                        <Link href="/get-quote" className="w-full sm:w-max">
+                            <ShimmerButton
+                                className="relative w-full sm:w-max flex items-center justify-center transition-all hover:shadow-[0_0_0_3px_rgba(255,255,255,0.3)_inset]"
+                                background="radial-gradient(ellipse 80% 70% at 50% 120%, #b28ce2, #892fda)"
+                            >
+                                <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-white z-10">
+                                    Get Quote
+                                </span>
+                            </ShimmerButton>
+                        </Link>
                     </div>
+                    <RetroGrid className="opacity-10 dark:opacity-60 absolute -z-10  dark:animate-pulse duration-150 " />
+                    <Blur />
                 </div>
                 {/* Right content */}
                 <div
