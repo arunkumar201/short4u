@@ -1,3 +1,4 @@
+'use client';
 import { Button } from '@/components/ui/button';
 import { CheckIcon } from 'lucide-react';
 
@@ -14,7 +15,7 @@ export const Pricing = () => {
                             "Choose the plan that's right for your business. All plans include a 14-day free trial."
                         }
                     </p>
-                </div>
+                </div>{' '}
                 <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div className="rounded-lg border bg-background p-8 shadow-lg">
                         <h3 className="text-xl font-semibold">Starter</h3>
