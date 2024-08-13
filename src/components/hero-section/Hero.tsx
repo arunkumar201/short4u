@@ -8,6 +8,7 @@ import Link from 'next/link';
 export const Hero = () => {
     return (
         <>
+            <div className="absolute -z-10 inset-0 w-full h-full scale-[1.2] bg-[#020d15] dark:bg-[#040f1f]" />
             <section className="relative z-[200] flex w-full flex-row justify-between items-start flex-1 flex-wrap gap-y-3 md:gap-0 prose">
                 {/* Left Content  */}
                 <div className="w-full md:w-[52%] flex flex-col justify-center items-start gap-4">
