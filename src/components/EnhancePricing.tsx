@@ -147,7 +147,7 @@ const OfferCard = ({
                         : {}
                 }
             >
-                <div className="text-lg font-semiboldtext-neutral-200">
+                <div className="text-lg font-semibold text-neutral-200">
                     {title}
                 </div>
                 <div className="mt-2 text-sm text-neutral-400">
@@ -161,7 +161,7 @@ const OfferCard = ({
                     <div className="text-sm text-neutral-400">
                         {selectedBilledType === 'monthly'
                             ? 'billed monthly'
-                            : `${getAnnualPrice()}€ billed annually`}
+                            : `${getAnnualPrice()}$ billed annually`}
                     </div>
                 </div>
 
